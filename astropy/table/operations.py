@@ -810,6 +810,7 @@ def unique(input_table, keys=None, silent=False, keep="first"):
     Parameters
     ----------
     input_table : table-like
+        The input data must be an `astropy.table.Table` or a subclass thereof.
     keys : str or list of str
         Name(s) of column(s) used to create unique rows.
         Default is to use all columns.
@@ -829,6 +830,7 @@ def unique(input_table, keys=None, silent=False, keep="first"):
     -------
     unique_table : `~astropy.table.Table` object
         New table containing only the unique rows of ``input_table``.
+        The input table will be sorted based on the keys before unique rows are identified.
 
     Examples
     --------
